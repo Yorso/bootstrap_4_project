@@ -11,7 +11,7 @@
   <body>
     <section class="bienvenidos">
         <header class="encabezado" role="banner"><!--
-                                                      header.encabezado and then press "Tab" key and it is created automatically, thanks to Emmet extension
+                                                      Type header.encabezado and then press "Tab" key and it is created automatically, thanks to Emmet extension
                                                       role="banner" tell us this is the site header (logo, button, menus...)
                                                    -->
             <a href="index.html">
@@ -20,6 +20,23 @@
             
             <button type="button" class="boton-buscar">Bot&oacute;n Buscar</button> <!-- Magnifying glass -->
             <button type="button" class="boton-menu">Bot&oacute;n Men&uacute;</button> <!-- Menu -->
+
+            <form action="#" class="bloque-buscar"><!-- Type form.action.id and then press "Tab" key and it is created automatically (Emmet extension) -->
+                <div class="contenedor-bloque-buscar">
+                    <input type="text" placeholder="Buscar...">
+                    <input type="submit" value="Buscar">
+                </div>
+            </form>
+
+            <!-- Navigation menu -->
+            <nav id="menu-principal"><!-- Type nav#menu-principal and then press "Tab" key and it is created automatically (Emmet extension) -->
+                <ul>
+                    <li class="active"><a href="index.html">Start</a></li> <!-- Putting styles to active menu element -->
+                    <li><a href="nosotros.html">About us</a></li>
+                    <li><a href="servicios.html">Services</a></li>
+                    <li><a href="contacto.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
     </section>
   </body>

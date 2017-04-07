@@ -11,27 +11,51 @@
     <style>
         /* Styles for section tags */
         section{
-            width: 400px;
+            width: 500px;
             height: 200px;
             border: 1px solid #000;
             margin: 0 auto;
-            display: flex; /* span tag displays as wide as its text inside */
-            flex-direction: column; /* Principal axis displays vertically */
+            display: flex; /* "span" tag displays as wide as its text inside */
+            flex-direction: column; /* "flex-direction: column" => Main axis displays vertically */
+            flex-wrap: wrap; /* Elements skip line if they do not fit in the container */
+            justify-content: center; /* "justify-content: center" aligns "article" items on the main axis (check flex-direction to know what the main axis is) */
+            align-items: center; /* "align-items: center;" aligns "article" items on the secondary axis (check flex-direction to know what the secondary axis is) */
         }
 
         /* Styles for caja1 class */
         .caja1{
             background: blue;
+            flex-grow: 1; /* "flex-grow: 1;" makes this item fills blank space in the container */
+            flex-basis: 175px; /* Initial item size */
         }
 
         /* Styles for caja2 class */
         .caja2{
             background: green;
+            flex: 0 1 100px; /*
+                                flex-grow: 0;
+                                flex-shrink: 1;
+                                flex-basis = 100px;
+                             */
         }
 
         /* Styles for caja3 class */
         .caja3{
             background: pink;
+            align-self: flex-end; /* This item will be aligned in a different way to the rest of items, it doesn't have in consideration "align-items" common property in "section" style */
+            flex: 0 50px; /*
+                             flex-grow: 0;
+                             flex-basis = 50px;
+
+                             By default:  flex-shrink: 1;
+                          */
+            /*
+            flex: 1; /*
+                         flex-grow: 1;
+
+                         By default:  flex-shrink: 1; and flex-basis = 0px;
+
+            */
         }
 
     </style>
@@ -41,7 +65,7 @@
   <body>
 
     <section>
-        <article class="caja1">Box 1</article>
+        <article class="caja1">Box 1 Box 1 Box 1</article>
         <article class="caja2">Box 2</article>
         <article class="caja3">Box 3</article>
 

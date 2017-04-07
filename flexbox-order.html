@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Starter template copied from Bootstrap 4 Documentation page => https://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
+<html lang="en">
+  <head>
+    <title>NETWORK | Enterprise Mobile Solutions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <style>
+        /* Styles for section tags */
+        .contenedor{
+            width: 500px;
+            border: 1px solid blue;
+            margin: 1rem auto;
+            display: flex; /* "span" tag displays as wide as its text inside */
+        }
+
+        /* Styles for caja1 class */
+        .caja1{
+            background: blue;
+            padding: 1rem;
+            order: 1; /* This box goes to the last position */
+        }
+
+        /* Styles for caja2 class */
+        .caja2{
+            background: green;
+            padding: 1rem;
+        }
+
+        /* Styles for caja3 class */
+        .caja3{
+            background: pink;
+            padding: 1rem;
+            order: -1; /* This box goes to the first position */
+        }
+
+        /* Styles for caja4 class */
+        .caja4{
+            background: orange;
+            padding: 1rem;
+        }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <section class="contenedor">
+        <article class="caja1">Box 1</article>
+        <article class="caja2">Box 2</article>
+        <article class="caja3">Box 3</article>
+        <article class="caja4">Box 4</article>
+
+        <!-- Testing "display: flex;" -->
+        <!--span class="caja1">Box sadasdasdasd1</span>
+        <span class="caja2">Box 2</span-->
+    </section>
+
+  </body>
+</html>

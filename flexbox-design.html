@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- Starter template copied from Bootstrap 4 Documentation page => https://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
+<html lang="en">
+  <head>
+    <title>NETWORK | Enterprise Mobile Solutions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <style>
+        .contenedor{
+            max-width: 80%;
+            margin: 1rem auto; /* Margin top and margin bottom are 1rem. Margin left and margin right are auto */
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        header{
+            background: #cff821;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between; /* img to the left and menu to the right */
+            align-items: center; /* Menu items vertically centered */
+            flex: 1 1 100%;
+            order: 0; /* header will display before all blocks (.contenido, aside, footer, etc...) */
+        }
+
+        header a{
+            flex: 0 1 180px;
+        }
+
+        header a img{
+            width: 100%;
+        }
+
+        header nav ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li a{
+            display: block; /* Links must be elements in block */
+            background: red;
+            color: white; /* text color */
+            padding: 1rem;
+            margin: 0 .3rem;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .contenido{
+            background: #9ce317;
+            flex: 3 1 0px;
+            padding: 1rem;
+            order: 2;
+        }
+
+        .lateral-1{
+            background: #16c1c7;
+            flex: 1 1 0px;
+            padding: 1rem;
+            order: 1; /* lateral-1 will display before contenido but after header */
+        }
+
+        .lateral-2{
+            background: #c71691;
+            flex: 1 1 0px;
+            padding: 1rem;
+            order: 3;
+        }
+
+        footer{
+            background: #0f0e0e;
+            color: #fff;
+            flex: 1 1 100%;
+            text-align: center;
+            order: 4;
+        }
+
+        @media (max-width: 1000px){
+            .contenedor{
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 850px){
+            header{
+                flex-direction: column;
+            }
+            header a{
+                flex: 0 1 auto;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 700px){
+            .contenido,
+            .lateral-1,
+            .lateral-2{
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 590px){
+            .contenedor{
+                max-width: 100%;
+                margin: 0;
+            }
+            header{
+                padding: 1rem 0 0 0;
+                justify-content: center;
+                align-items: stretch;
+            }
+            header a.logo{
+                align-self: center;
+                padding: 1rem;
+            }
+            header nav ul{
+                flex-direction: column;
+            }
+            header nav ul li a{
+                margin: 0;
+                border-bottom: 1px solid #af0f0f;
+                border-radius: 0;
+                text-align: center;
+            }
+        }
+    </style>
+
+  </head>
+
+  <body>
+        <div class="contenedor">
+            <header>
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="Logo's site"/>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Enlace 1</a></li>
+                        <li><a href="#">Enlace 2</a></li>
+                        <li><a href="#">Enlace 3</a></li>
+                        <li><a href="#">Enlace 4</a></li>
+                        <li><a href="#">Enlace 5</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <article class="contenido">
+                <h1>Main content</h1>
+                <p>
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+                <p>
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </p>
+                <p>
+                    Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                </p>
+                <p>
+                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                </p>
+            </article>
+
+            <aside class="lateral-1">
+                <h2>Side 1</h2>
+                <p>
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+                <p>
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </p>
+            </aside>
+
+            <aside class="lateral-2">
+                <h2>Side 2</h2>
+                <p>
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+                <p>
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </p>
+            </aside>
+
+            <footer>
+                All rights reserved
+            </footer>
+        </div>
+  </body>
+</html>

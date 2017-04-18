@@ -1,0 +1,44 @@
+//---------------
+//Color pattern
+//---------------
+$texto: #111111;
+$encabezado: #556633;
+$principal: #12AFAF;
+$secundario: #009500;
+
+html{
+    font-size: 15px; /* Defining our font size => 1rem == 15px */
+    // font-size: 37px; /* Now our font size would be 1rem == 37px */
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}
+
+.encabezado{
+    background: $encabezado;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.encabezado .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.encabezado .logo img{
+    width: 150px;
+    height: auto;
+}
+
+/* Search and menu styles */
+.boton-buscar, .boton-menu{
+    border: 0;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 .5rem;
+    color: #fff;
+    background: transparent;
+}

@@ -1,0 +1,40 @@
+html {
+  font-size: 15px
+  /* Defining our font size => 1rem == 15px */ }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #111111; }
+
+.encabezado {
+  background: #556633;
+  color: #fff;
+  padding: .5rem 0; }
+
+.encabezado .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.encabezado .logo img {
+  width: 150px;
+  height: auto; }
+
+/* Search and menu styles */
+.boton-buscar, .boton-menu {
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 .5rem;
+  color: #fff;
+  background: transparent; }
+
+/*# sourceMappingURL=estilos.css.map */

@@ -16,6 +16,13 @@ body{
     color: $texto;
 }
 
+.bienvenidos{
+    background: url("../images/fondo-encabezado.jpg") no-repeat center top;
+    color: #fff;
+    background-size: cover; /* This makes the image look best in width and height */
+    height: 100vh; /* It covers the whole (100vh = 100 viewport height) starting screen of the device */
+}
+
 .encabezado{
     background: $encabezado;
     color: #fff;
@@ -46,7 +53,7 @@ body{
 
 .boton-buscar:focus,
 .boton-menu:focus{
-    online: 0;
+    ouline: 0;
 }
 
 .boton-buscar{
@@ -78,6 +85,8 @@ body{
     border-radius: 0 5px 5px 0;
     background: $principal;
     color: #fff;
+    flex: 0 1 auto;
+    padding: 0 1rem;
 }
 
 /* Menu styles */
@@ -106,7 +115,18 @@ body{
     color: $principal;
 }
 
+.texto-encabezado{ /* This always causes the arrow to remain at the bottom */
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .texto-encabezado .display-4{
+    margin-top: 4rem;
+}
+
+.texto-encabezado .btn-primary {
     margin-top: 1rem;
 }
 
@@ -114,7 +134,6 @@ body{
     color: #fff;
     background-color: $principal;
     border-color: transparent;
-    margin-top: 1rem;
     transition: all .5s ease;
 }
 
@@ -123,4 +142,24 @@ body{
 .btn-primary:active:hover{
     background-color: $secundario;
     border-color: transparent;
+}
+
+/* Arrow styles */
+.flecha-bajar a{
+    color: #fff;
+    font-size: 4rem;
+    animation: flecha-animada 2s ease-in-out infinite; /* 2s is the duration of the animation. ease-in-out is its aceleration */
+}
+
+/* Arrow animation */
+@keyframes flecha-animada{
+    from{ /* Arrow initial position */
+        transform: translateY(0)
+    }
+    50%{ /* Halfway */
+        transform: translateY(6px) /* Arrow goes down 6px */
+    }
+    to{ /* Arrow end position */
+        transform: translateY(0) /* Arrow goes back to its initial position */
+    }
 }

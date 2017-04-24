@@ -6,6 +6,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #111111; }
 
+.bienvenidos {
+  background: url("../images/fondo-encabezado.jpg") no-repeat center top;
+  color: #fff;
+  background-size: cover;
+  /* This makes the image look best in width and height */
+  height: 100vh
+  /* It covers the whole (100vh = 100 viewport height) starting screen of the device */ }
+
 .encabezado {
   background: #556633;
   color: #fff;
@@ -40,7 +48,7 @@ body {
 
 .boton-buscar:focus,
 .boton-menu:focus {
-  online: 0; }
+  ouline: 0; }
 
 .boton-buscar {
   margin-left: auto;
@@ -78,7 +86,12 @@ body {
   border: 0;
   border-radius: 0 5px 5px 0;
   background: #12AFAF;
-  color: #fff; }
+  color: #fff;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  padding: 0 1rem; }
 
 /* Menu styles */
 #menu-principal {
@@ -106,14 +119,36 @@ body {
   /* li.active indicates "active" class in li elements */
   color: #12AFAF; }
 
+.texto-encabezado {
+  /* This always causes the arrow to remain at the bottom */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
 .texto-encabezado .display-4 {
+  margin-top: 4rem; }
+
+.texto-encabezado .btn-primary {
   margin-top: 1rem; }
 
 .btn-primary {
   color: #fff;
   background-color: #12AFAF;
   border-color: transparent;
-  margin-top: 1rem;
   -webkit-transition: all .5s ease;
           transition: all .5s ease; }
 
@@ -122,5 +157,41 @@ body {
 .btn-primary:active:hover {
   background-color: #009500;
   border-color: transparent; }
+
+/* Arrow styles */
+.flecha-bajar a {
+  color: #fff;
+  font-size: 4rem;
+  -webkit-animation: flecha-animada 2s ease-in-out infinite;
+          animation: flecha-animada 2s ease-in-out infinite
+  /* 2s is the duration of the animation. ease-in-out is its aceleration */ }
+
+/* Arrow animation */
+@-webkit-keyframes flecha-animada {
+  from {
+    /* Arrow initial position */
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    /* Halfway */
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    /* Arrow end position */
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@keyframes flecha-animada {
+  from {
+    /* Arrow initial position */
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    /* Halfway */
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    /* Arrow end position */
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 /*# sourceMappingURL=estilos.css.map */
